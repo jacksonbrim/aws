@@ -3,7 +3,7 @@ CLI tools and python scripts for working with the AWS SDK and CDK in Lambdas, or
 All the CLI aspects of these scripts can be accomplished using the AWS CLI, but it was an excuse to
 play around with the ArgParser library. 
 
-Potentially, I'd like to turn this into an interactive remote file & system navigator using the very cool TUI library, [Textual](https://github.com/Textualize/textual).
+Potentially, I'd like to turn this into an interactive AWS resources navigator using the very cool TUI library, [Textual](https://github.com/Textualize/textual).
 
 
 ###### Install Boto3
