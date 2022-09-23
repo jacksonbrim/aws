@@ -11,7 +11,7 @@ def WorkShopPipelineStack(Stack):
 
         repo = codecommit.Repository(
             self, 'WorkshopRepo',
-            repository_name= "WorkshopRepo"
+            repository_name="WorkshopRepo"
         )
 
         # Pipeline code will go here
