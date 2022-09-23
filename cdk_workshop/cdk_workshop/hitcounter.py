@@ -20,6 +20,7 @@ class HitCounter(Construct):
         self._table = ddb.Table(
             self, 'Hits',
             partition_key={'name': 'path', 'type': ddb.AttributeType.STRING}
+            removal_policy=RemovalPolicy.DESTROY # Removes the database when calling "cdk destroy"
         )
 
         self._handler = _lambda.Function(
