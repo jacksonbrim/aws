@@ -29,3 +29,5 @@ class HitCounter(Construct):
             }
         )
 
+        table.grant_read_write_data(self.handler)
+
