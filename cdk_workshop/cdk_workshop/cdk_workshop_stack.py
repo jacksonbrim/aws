@@ -26,5 +26,5 @@ class CdkWorkshopStack(Stack):
 
         apigw.LambdaRestApi(
             self, 'Endpoint',
-            handler=hello_with_counter,
+            handler=hello_with_counter._handler,
         )
