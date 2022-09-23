@@ -29,5 +29,14 @@ class HitCounter(Construct):
             }
         )
 
+        # Grants read write permissions toe the handler function
         table.grant_read_write_data(self.handler)
+
+        """
+        CloudWatch logs showed that HitCountHandler (aka self._handler) was not authorized to perform
+        lambda:InvokeFunction on the lambda function
+        need to grant invoke permissions to self._handler
+        """
+        # Grants invoke permissions to the _handler 
+        downstream.grant_invoke(self._handler)
 
