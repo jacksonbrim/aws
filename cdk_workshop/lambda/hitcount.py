@@ -18,6 +18,10 @@ def handler(event, context):
         ExpressionAttributeValues={':incr': 1}
     )
 
+    # get value for the recently updated path key in teh dynamodb table
+    value = table.get_item(Key={'path' : event['path']})
+
+
     # invoke lambda
     resp = _lambda.invoke(
         FunctionName=os.environ['DOWNSTREAM_FUNCTION_NAME'],
@@ -25,6 +29,8 @@ def handler(event, context):
     )
 
     body = resp['Payload'].read()
+    
+    print(f"hitcount.py:\n\nbody: {body}")
 
     # invoked lambda response
     print('downstream.response: {}'.format(body))
