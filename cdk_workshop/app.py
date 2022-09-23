@@ -2,9 +2,9 @@
 
 import aws_cdk as cdk
 
-from cdk_workshop.pipeline_stack import WorkShopPipelineStack
+from cdk_workshop.pipeline_stack import WorkshopPipelineStack
 
 app = cdk.App()
-WorkShopPipelineStack(app, "WorkShopPipelineStack")
+WorkshopPipelineStack(app, "WorkshopPipelineStack")
 
 app.synth()
