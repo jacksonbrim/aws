@@ -5,6 +5,8 @@ play around with the ArgParser library.
 
 Potentially, I'd like to turn this into an interactive AWS resources navigator using the very cool TUI library, [Textual](https://github.com/Textualize/textual).
 
+...Apparently, this is already a thing. See [fsspec](https://filesystem-spec.readthedocs.io/en/latest/).
+
 
 ###### Install Boto3
 [Boto3 Installation instructions](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/quickstart.html#installation)
